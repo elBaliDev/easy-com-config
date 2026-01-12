@@ -1,8 +1,41 @@
+# Configuration spécifique à ton DTO de contact
 products:
   message: "Welcome to Library Product Catalogue local APIs"
   contactDetails:
-    name: "Catalogue Team - Inventory Dept"
-    email: "catalog-admin@library.com"
+    name: "Catalogue Team"
+    email: "catalog@library.com"
   onCallSupport:
     - (555) 888-9999
-    - (555) 888-7777
+
+spring:
+  # Configuration RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  # Configuration de la Base de données
+  datasource:
+    url: jdbc:postgresql://localhost:5432/products
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+  liquibase:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
