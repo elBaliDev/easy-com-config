@@ -24,3 +24,10 @@ management:
   info:
     env:
       enabled: true
+
+# --- Info Endpoint Configuration ---
+info:
+  app:
+    name: ${spring.application.name}
+    description: "Easycom Config Management Microservice"
+    version: "1.0.0"
