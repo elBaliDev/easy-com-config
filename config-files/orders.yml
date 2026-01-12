@@ -1,3 +1,4 @@
+# --- Propriétés personnalisées que tu as créées ---
 orders:
   message: "Welcome to Library Order Processing local APIs"
   contactDetails:
@@ -6,3 +7,40 @@ orders:
   onCallSupport:
     - (555) 444-5555
     - (555) 444-6666
+
+# --- Configuration RabbitMQ ---
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  # --- Datasource ---
+  datasource:
+    url: jdbc:postgresql://localhost:5434/orders
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  # --- JPA / Hibernate ---
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+  # --- Liquibase ---
+  liquibase:
+    enabled: true
+
+# --- Actuator (Sécurité : on n'expose pas tout en PROD normalement) ---
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
