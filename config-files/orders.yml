@@ -1,6 +1,6 @@
 # --- Propriétés personnalisées que tu as créées ---
 orders:
-  message: "Welcome to Library Order Processing local APIs"
+  message: "Welcome to Easycom Order Processing local APIs"
   contactDetails:
     name: "Sales Team - Order Dept"
     email: "sales-engine@library.com"
