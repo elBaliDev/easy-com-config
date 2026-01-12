@@ -1,0 +1,8 @@
+users:
+  message: "Welcome to Library User Management local APIs"
+  contactDetails:
+    name: "User Team - Identity Dept"
+    email: "users-support@library.com"
+  onCallSupport:
+    - (555) 111-2222
+    - (555) 111-3333

@@ -1,0 +1,8 @@
+products:
+  message: "Welcome to Library Product Catalogue local APIs"
+  contactDetails:
+    name: "Catalogue Team - Inventory Dept"
+    email: "catalog-admin@library.com"
+  onCallSupport:
+    - (555) 888-9999
+    - (555) 888-7777

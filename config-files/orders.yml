@@ -1,0 +1,8 @@
+orders:
+  message: "Welcome to Library Order Processing local APIs"
+  contactDetails:
+    name: "Sales Team - Order Dept"
+    email: "sales-engine@library.com"
+  onCallSupport:
+    - (555) 444-5555
+    - (555) 444-6666
