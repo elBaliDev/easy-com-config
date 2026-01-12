@@ -41,8 +41,34 @@ spring:
         max-interval: 2000
         multiplier: 1.1
 
+# --- Eureka Server Specific Configuration ---
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
+
+# --- Monitoring and Health Configuration ---
 management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
   endpoints:
     web:
       exposure:
         include: "*"
+  info:
+    env:
+      enabled: true
+
+# --- Info Endpoint Configuration ---
+info:
+  app:
+    name: ${spring.application.name}
+    description: "Easycom Users Microservice"
+    version: "1.0.0"
