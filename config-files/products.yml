@@ -1,6 +1,6 @@
 # Configuration spécifique à ton DTO de contact
 products:
-  message: "Welcome to Library Product Catalogue local APIs"
+  message: "Welcome to Easycom Product local APIs"
   contactDetails:
     name: "Catalogue Team"
     email: "catalog@library.com"
